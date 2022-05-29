@@ -1,0 +1,18 @@
+
+<%= form_with model: article do |form| %>
+    <div>
+        <%= form.label :todo, "What to do:" %> <br>
+        <%= form.text_field :todo %>
+
+        <% article.errors.full_messages_for(:todo).each do |message| %>
+        <div> message </div>
+        <% end %>
+    </div>
+
+    <div>
+        <br>
+        <%= form.submit "Add item" %>
+    </div>
+<% end %>
+
+<%= link_to "Home", "/" %>

@@ -1,0 +1,11 @@
+<h1> Welcome to TODOoby </h1>
+
+<ul>
+    <% @articles.each do |article| %>
+        <li>
+            <%= link_to article.todo, article %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Add new TODO item", new_article_path %>
